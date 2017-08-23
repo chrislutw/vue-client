@@ -1,12 +1,13 @@
 var path = require('path')
+var fs = require('fs')
 var config = require('../config')
 var ExtractTextPlugin = require('extract-text-webpack-plugin')
 var bourbonPath = require('node-bourbon').includePaths
 
 exports.assetsPath = function (_path) {
-  var assetsSubDirectory = process.env.NODE_ENV === 'production'
-    ? config.build.assetsSubDirectory
-    : config.dev.assetsSubDirectory
+  var assetsSubDirectory = config.dev.assetsSubDirectory
+  if (process.env.NODE_ENV === 'testing') assetsSubDirectory = config.test.assetsSubDirectory
+  if (process.env.NODE_ENV === 'production') assetsSubDirectory = config.build.assetsSubDirectory
   return path.posix.join(assetsSubDirectory, _path)
 }
 
@@ -21,6 +22,11 @@ exports.cssLoaders = function (options) {
     }
   }
 
+exports.entryFiles = function (_path) {
+
+  return fs.readdirSync(_path)
+
+}
   // generate loader string to be used with extract text plugin
   function generateLoaders (loader, loaderOptions) {
     var loaders = [cssLoader]

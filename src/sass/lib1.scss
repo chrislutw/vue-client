@@ -1,4 +1,8 @@
-@import 'bourbon';
+:root {
+  --my-red: #FF9900;
+}
+
 h1 {
   color:red;
+  background-color: var(--my-red);
 }
