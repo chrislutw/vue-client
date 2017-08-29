@@ -19,6 +19,10 @@ module.exports = {
   'rules': {
     // allow paren-less arrow functions
     'arrow-parens': 0,
+    'eqeqeq': [2, 'allow-null'],
+    //函数定义时括号前面要不要有空格
+    "space-before-function-paren": [0, "always"],
+    'no-unused-vars': 0,
     // allow async-await
     'generator-star-spacing': 0,
     // allow debugger during development

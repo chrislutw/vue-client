@@ -6,15 +6,20 @@ var vueLoaderConfig = require('./vue-loader.conf')
 function resolve (dir) {
   return path.join(__dirname, '..', dir)
 }
-var entryPath = resolve('src/WebpackEntry')
-var entryFiles = utils.entryFiles(entryPath)
-                      .map(name => {return {[name.split('.')[0]]: `${entryPath}\\${name.split('.')[0]}`}})
-                      .reduce((a, b) => Object.assign(a, b), {})
-var venders = {vendor: ['vue', 'vue-router', 'vuex', 'vuex-router-sync', 'superagent']}
-Object.assign(entryFiles, venders)
+
+// 多entry設定
+// var entryPath = resolve('src/WebpackEntry')
+// var entryFiles = utils.entryFiles(entryPath)
+//                       .map(name => {return {[name.split('.')[0]]: `${entryPath}\\${name.split('.')[0]}`}})
+//                       .reduce((a, b) => Object.assign(a, b), {})
+// var venders = {vendor: ['vue', 'vue-router', 'vuex', 'vuex-router-sync', 'superagent']}
+// Object.assign(entryFiles, venders)
 
 module.exports = {
-  entry: entryFiles,
+  entry: {
+    app: '@/WebpackEntry',
+    vendor: ['vue', 'vue-router', 'vuex', 'vuex-router-sync', 'superagent']
+  },
   output: {
     path: config.build.assetsRoot,
     filename: '[name].js',
