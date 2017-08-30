@@ -1,0 +1,74 @@
+@charset "utf-8";
+/************ nav ***********/
+ul.nav{
+    display: block;
+    height: auto;
+    padding: 2% 0 0 0;
+    margin: 0 auto;
+    width:98.5%;
+    @include clearfix;
+    @media (min-width: 568px) {
+        padding: 0 0 0 0;
+        width:96%;
+    }
+    li{
+        background: url("../images/bg-nav.png") left center no-repeat;
+        background-size: 100% 100%;
+        box-sizing: border-box;
+        display: block;
+        float: left;
+        list-style: none;
+        height:0;
+        margin:0 3px 2.5%;
+        max-height: 130px;
+        // max-width:230px;
+        padding: 0 0 19% 0;
+        position: relative;
+        text-align: center;
+        width:calc(100%/3 - 6px);
+        @include clearfix;
+        @media (min-width: 568px) {
+            margin:0 5px 2%;
+            width:calc(100%/3 - 10px);
+        }
+    }
+}
+
+ul.nav li a{
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 100%;
+    position:absolute;
+    width: 100%;
+    .nav-icon{
+        height: 50px;
+        margin: 0 auto;
+        width: 50px;
+        @media (min-width: 568px){ height: 60px; width: 60px;}
+        @media (min-width: 667px){ height: 70px; width: 70px;}
+    }
+    p{
+        color: #380000;
+        font-weight: bold;
+        margin: -25px auto 0;
+        width:100%;
+        @media (min-width: 667px) { font-size: 18px; }
+    }
+
+}
+
+ul.nav li .sale-position{    
+    margin: -2px 0 0 -3px;    
+    position: absolute;
+    
+}
+
+
+@each $icon_name in creditcard, funpay, gift, mobile, topup{     
+    ul.nav li .nav-icon.icon-#{$icon_name}{
+        background: url('../images/svg/icon-#{$icon_name}.svg') center top no-repeat;
+        background-size: 100% 100%;
+    }
+}

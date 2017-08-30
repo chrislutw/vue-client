@@ -1,0 +1,37 @@
+//table data
+.common-table{
+    width: 100%;
+}
+
+.common-table .common-tr{
+    border: solid 1px #a89839;
+    height: 36px;
+    line-height: 35px;
+    margin: 0 auto -1px;
+    padding: 0 5px;
+    width: 100%;
+    @include clearfix; 
+    div{
+        color: #fff;
+        font-size: 3.3vw;
+        float:left;
+        text-align:center;
+        width: calc(100%/3);
+        @media (min-width: 667px){
+            font-size: 19px;
+        }
+    }
+    &:nth-child(odd) { background: #181421; }
+    &:nth-child(even){ background: #4a3452; }
+    &:first-child { background: #000; } 
+    
+    .common-th{        
+        color: #c68440;
+        line-height: 36px;
+    }
+}
+
+.common-table .common-tr{
+    div{ width: 35%; }
+    div:last-child{ width: 30%;}
+}

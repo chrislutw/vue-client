@@ -1,0 +1,156 @@
+/*
+ * Global Styles
+ */
+
+@import url('https://fonts.googleapis.com/css?family=Questrial');
+
+:root{
+    --bg-color: #000; 
+    --font-color: #666;
+    --primary-font: 'Questrial', \5FAE\8EDF\6B63\9ED1\9AD4,\65B0\7D30\660E\9AD4, Helvetica, Arial, sans-serif;   
+    --main-color: #da6701;
+} 
+
+body {
+    background  : var(--bg-color);
+	color       : var(--font-color);
+	font-family : var(--primary-font);
+	font-size   : rem(16);
+	line-height : normal;
+}
+
+a { 
+    color: var(--main-color);
+	text-decoration: none;	
+}
+a:link, a:hover, a:visited, a:active{ border:none; outline: none; }
+
+a, img{ @include no-select; }
+
+a:focus, input:focus, textarea:focus, select:focus{ outline:0; }
+input, textarea, select{ -webkit-appearance: none; }
+
+input::-moz-placeholder { opacity: 1;  }
+
+.clear{ clear:both; }
+
+.clearfix:before,.clearfix:after{ 
+    content:""; 
+    display:table; 
+} 
+.clearfix:after{clear:both;} 
+.clearfix{ 
+    *zoom:1;/*IE/7/6*/ 
+}
+
+/***************[Layout Css]**************/
+.left  { float: left; }
+.right { float: right; }
+.center{ margin: 0 auto; text-align:center; }
+
+.t-left  { text-align: left; }
+.t-right { text-align: right; }
+.t-center{ text-align: center; }
+
+.relative { position: relative; }
+.absolute { position: absolute; }
+.fixed    { position: fixed;    }
+
+.hide { display: none !important; }
+.show { display: block !important; }
+
+.opacity-show{ opacity:1 !important; }
+.opacity-hide{ opacity:0 !important; }
+
+.img100 { width: 100%; }
+
+// .txt-red { color: $accent-color; }
+.txt-green{ color: #487f06; }
+.txt-orange{ color: #ff6600; }
+.txt-deep-blue{ color: #274876; }
+.txt-deep-red{ color: #850303; }
+.txt-deep-green{ color: #047109; }
+.txt-white{ color: #fff; }
+
+.txt-bold { font-weight: bold; }
+
+@for $i from 1 through 9 {
+    .mt-#{$i*5} { margin-top: #{$i*5}px; }
+    .mb-#{$i*5} { margin-bottom: #{$i*5}px; }
+    .mr-#{$i*5} { margin-right: #{$i*5}px; }
+    .ml-#{$i*5} { margin-left: #{$i*5}px; }
+}
+
+@for $i from 2 through 9 {
+    .dv#{$i} { width: #{100%/$i}; }
+}
+
+$w2: 100%/2;
+$w3: 100%/3;
+$w4: 100%/4;
+$w5: 100%/5;
+$w6: 100%/6;
+
+/***************[Button]**************/
+.btn-wrap{
+    text-align: center;
+    width: 100%;
+}
+
+button, a.btn{
+    background: #2a7700;
+    background: 
+        linear-gradient(90deg, #3cc900 0%, #3cc900 1%, transparent 2%, transparent 98%, #3cc900 99%, #3cc900),
+        linear-gradient(180deg, #75ce12 0%, #75ce12 7%, #c2ea5b 9%, #86d423 50%, #59b707 50%, #58aa00 90%, #3cc900 92%, #3cc900);
+    border: solid 1px #f2c700;
+    border-radius: 7px;
+    box-shadow: 0 0 3px #446100 inset, 0 0 3px #446100 inset;
+    color: #fff;
+    display: inline-block;
+    font-weight: bold;
+    font-size: em(16);
+    height: 45px;
+    line-height:45px;
+    text-shadow: 0 0 3px #274002, 0 0 3px #274002, 0 0 3px #274002, 0 0 3px #274002, 0 0 3px #274002; 
+    width: 100%;    
+    &:hover, &:focus, &:active{  }
+   
+    &.small{
+        font-weight: normal;
+        font-size: em(16);
+        padding: 5px 10px;
+    }
+}
+button:focus, button:active{ outline:0; } 
+
+button.orange{  
+    background: #c85001;
+    background: linear-gradient(#e16d08 0%, #c85001 100%);
+    &:hover, &:focus, &:active{  background: linear-gradient(#db6600 0%, #bc4700 100%); }
+}
+
+/** can not click **/
+button:disabled{
+    background: #373737;
+    background: linear-gradient(#595858 0%, #434343 50%, #373737 100%);
+    border-radius: 8px;
+    color: #fff;   
+}
+
+/*************************/
+.loading-wrap{
+    margin: 2em auto;
+    padding: 1em;
+    text-align:center;
+    width:100%;
+}
+
+.no-data{
+    background: linear-gradient(90deg, transparent 0%, #b96c06 50%, transparent 100%);
+    color: #fff3ce;
+    font-size: em(20);
+    margin: 2em auto;
+    padding: 0.7em;
+    text-align: center;
+    width: 70%;
+}

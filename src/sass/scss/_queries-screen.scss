@@ -1,0 +1,112 @@
+// big screen
+@media (min-width: 800px){
+    .content{ height: auto; }
+    ul.nav{
+        padding: 1% 0 0 0;
+        width:100%;
+        li{
+            background: #ffcc33;
+            height:40px;
+            margin: 0 1% 0 0;            
+            padding:0;
+            width:calc(96%/5);
+            &:last-child{ margin-right:0; }
+        }
+    }
+    ul.nav li a{
+        display: block;
+        .nav-icon{
+            display: inline-block;
+            height: 40px;
+            margin: 0;
+            vertical-align: middle;
+            width: 40px;
+        }
+        p{
+            display: inline-block;
+            height: 40px;
+            margin: 0;
+            width:auto;
+        }
+    }
+
+    ul.nav li .sale-position{
+        font-size: 11px; 
+        margin: -11px 0 0 -10px;    
+        position: absolute;        
+    }
+
+    //credit card
+    ul.credit-wrap {
+        display: block;
+        height: auto;
+        padding: 0 0 0 0;
+        margin: 20px auto 0;
+        width: 100%;
+        li {
+            background: #550303;
+            border: solid 1px #f3bf08;
+            border-radius: 10px;
+            display: inline-block;
+            list-style: none;
+            margin: 0 5px 10px;
+            max-height: none;
+            max-width: none;
+            padding: 0;
+            position: relative;
+            height: 60px;
+            text-align: center;
+            width: 100%;
+        }
+    }
+
+    ul.credit-wrap li .sale-position {
+        border: solid 2px #ffc602;
+        color: #fff;
+        height: 36px;
+        margin: -5px 0 0 -5px;
+        padding: 10px 0 0 0;
+        position: absolute;
+        width: 36px;
+        z-index: 2;
+    }
+
+    ul.credit-wrap li .credit-info {
+        height: 100%;
+        padding: 0 0 0 0;
+        position: relative;
+        text-align: left;
+        width: auto;
+        .credit-money, .credit-vp {
+            color: #ffe537;
+            font-size: 17px;
+            font-size: 1.8vw;
+            font-weight: bold;
+            line-height: 130%;
+            padding: 0 0 0 35%;
+        }
+        .credit-vp {
+            color: #8fe0fa;
+            font-size: 16px;
+            font-size: 1.4vw;
+        }
+    }
+    ul.credit-wrap li a.btn {
+        bottom: 5%;
+        font-size: 3vw;
+        height: 30%;
+        left: 50%;
+        line-height: 180%;
+        max-height: 40px;
+        position: absolute;
+        transform: translateX(-50%);
+        width: 62%;
+        z-index: 2;
+        span {
+            font-size: 13px;
+        }
+    }
+
+
+}
+
