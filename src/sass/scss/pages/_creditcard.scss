@@ -1,0 +1,86 @@
+/************ credit ***********/
+ul.credit-wrap {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: calc(100% - 26px);
+    padding: 0% 0 0 0;
+    margin: 0 auto;
+    width: 98%;
+    li {
+        background: #550303;
+        background: linear-gradient(90deg, #961616, #961616 2%, transparent 4%, transparent 96%, #380201 98%, #380201),
+        linear-gradient(180deg, #bc4343, #bc4343 3%, transparent 5%, transparent 93%, #470706 95%, #470706),
+        linear-gradient(90deg, #821111, #550303 100%);
+        border: solid 2px #f3bf08;
+        border-radius: 10px;
+        display: inline-block;
+        list-style: none;
+        margin: 0 5px 1.5%;
+        max-height: 130px;
+        max-width: 230px;
+        padding: 0;
+        position: relative;
+        height: 48%;
+        text-align: center;
+        width: calc(100%/3 - 10px);
+    }
+}
+
+ul.credit-wrap li .sale-position {
+    height: 36px;
+    margin: -5px 0 0 -5px;
+    padding: 10px 0 0 0;
+    position: absolute;
+    width: 36px;
+
+}
+
+ul.credit-wrap li .credit-info {
+    height: 100%;
+    padding: 8% 0 0 0;
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    .credit-money,
+    .credit-vp {
+        color: #ffe537;
+        font-size: 17px;
+        font-size: 2.8vw;
+        font-weight: bold;
+        line-height: 130%;
+        padding: 0 0 0 35%;
+    }
+    .credit-vp {
+        color: #8fe0fa;
+        font-size: 16px;
+        font-size: 2.5vw;
+    }
+}
+
+
+
+@for $i from 1 through 6 {
+    ul.credit-wrap li .credit-info.coin-L0#{$i} {
+        background: url('../images/coin-level0#{$i}.png') left center no-repeat;
+        background-size: auto 75%;
+    }
+}
+
+
+ul.credit-wrap li a.btn {
+    bottom: 5%;
+    font-size: 3vw;
+    height: 30%;
+    left: 50%;
+    line-height: 180%;
+    max-height: 40px;
+    position: absolute;
+    transform: translateX(-50%);
+    width: 62%;
+    z-index: 2;
+    span {
+        font-size: 13px;
+    }
+}

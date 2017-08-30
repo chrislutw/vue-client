@@ -1,0 +1,54 @@
+
+@mixin clearfix {
+    *zoom:1;
+    
+    &:after {
+        content : " ";
+        clear   : both;
+        display : block; 
+        overflow: hidden; 
+        height  : 0; 
+    }
+}
+
+// image setting
+@mixin bg($name,$bg) {  
+    background: url("../images/#{$name}.#{$bg}") left top no-repeat ;
+    width: image-width("../images/#{$name}.#{$bg}");  
+    height: image-height("../images/#{$name}.#{$bg}");  
+ }
+
+@mixin bg-only($name,$bg) {  background-image: url("../images/#{$name}.#{$bg}"); }
+
+// link
+@mixin alink{ 
+  &:link,&:visited{ @content; }   
+}   
+@mixin alink-hover{   
+  &:hover, &:focus, &:active, &.active{ @content; }   
+} 
+
+
+// touch can not show more info setting
+@mixin no-select {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+
+@mixin cover(){
+    position:absolute;
+    left    :0;
+    right   :0;
+    top     :0;
+    bottom  :0;
+}
+
+@mixin auto_center($width, $height:$width){
+    @include cover();
+    margin: auto;
+}

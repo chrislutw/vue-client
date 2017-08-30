@@ -1,0 +1,21 @@
+.icon-discount, .icon-rate{
+    background: linear-gradient(130deg, #e92924 20%, #8c0306 80%);
+    border: solid 3px #ffc602;
+    border-radius: 50%;
+    box-shadow: 0 0 5px #860908 inset, 0 0 5px #860908 inset, 0 0 5px #860908 inset, 0 0 8px #000, 0 0 8px #000;
+    color: #fff;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 120%;
+    height:46px;
+    padding: 6px 0 0 0;
+    text-align: center;
+    width:46px;
+    z-index: 2;
+}
+
+.icon-rate{
+    background: linear-gradient(130deg, #36bf07 20%, #2a5814 80%);
+    box-shadow: 0 0 5px #0b5502 inset, 0 0 5px #0b5502 inset, 0 0 5px #0b5502 inset, 0 0 5px #000 ;
+    
+}

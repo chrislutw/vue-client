@@ -1,0 +1,163 @@
+@import  "libs/mixins";
+
+// big screen
+.wrap{ max-width: 800px;}
+.content{ height: auto; }
+
+.main{ 
+    background: #111;
+    padding: 15px 15px 15px;
+    margin: 10px auto 5px;
+    width:100%;
+    @include clearfix;
+}
+
+
+ul.nav{
+    padding: 1% 0 0 0;
+    width:100%;
+    li{
+        background: #ffcc33;
+        height:40px;
+        margin: 0 1% 0 0;            
+        padding:0;
+        width:calc(96%/5);
+        &:last-child{ margin-right:0; }
+    }
+}
+ul.nav li a{
+    display: block;
+    .nav-icon{
+        display: inline-block;
+        height: 40px;
+        margin: 0;
+        vertical-align: middle;
+        width: 40px;
+    }
+    p{
+        display: inline-block;
+        height: 40px;
+        margin: 0;
+        width:auto;
+    }
+}
+
+ul.nav li .sale-position{
+    font-size: 11px; 
+    margin: -11px 0 0 -10px;    
+    position: absolute;        
+}
+
+//credit card
+ul.credit-wrap {
+    display: block;
+    height: auto;
+    width: 100%;
+    li {
+        background: linear-gradient(90deg, #bc4343, #bc4343 0.2%, transparent 0.3%, transparent 99.6%, #470706 99.7%, #470706),
+        linear-gradient(180deg, #bc4343, #bc4343 3%, transparent 5%, transparent 93%, #470706 95%, #470706),
+        linear-gradient(90deg, #821111, #550303 100%);
+        border: solid 2px #8b1717;
+        cursor: pointer;
+        margin: 0 0 10px;
+        max-height: none;
+        max-width: none;
+        padding: 0;
+        height: 60px;
+        width: 100%;
+        &:last-child{ margin: 0; }
+        &.active{
+            border: solid 2px #fad141;
+            box-shadow: 0 0 8px #fad141 inset, 0 0 8px #fad141 inset;
+        }
+    }
+}
+
+ul.credit-wrap li .sale-position{ margin: -6px 0 0 -2px; }
+
+ul.credit-wrap li .credit-info{
+    padding: 5px 0 0 0;
+    position: relative;
+    text-align: left;
+    width: auto;
+    .credit-money, .credit-vp {
+        font-size: 20px;
+        padding: 0 0 0 89px;
+    }
+    .credit-vp {
+        color: #8fe0fa;
+        font-size: 16px;
+    }
+}
+ul.credit-wrap li a.btn {
+    bottom: 5%;
+    font-size: 20px;
+    height: 80%;
+    left: auto;
+    line-height: 200%;
+    right: 8px;
+    transform: translate(0, -50%);
+    top: 50%;
+    width: 120px;
+}
+
+@for $i from 1 through 6 {
+    ul.credit-wrap li .credit-info.coin-L0#{$i} {
+        background: url('../images/coin-level0#{$i}.png') 12px 5px no-repeat;
+        background-size: auto 110%;
+    }
+}
+
+
+//Top up
+.topup-wrap{
+    margin: 0 auto 0;
+    width: 100%;
+}
+a.topup-button{
+    max-width: 340px;
+    .topup-logo{
+        padding: 2% 3% 0 0; 
+        img{ height: 92%; }
+    }    
+}
+
+//Funpay
+.funpay-wrap{
+    margin: 0 auto 0.3%;
+    padding: 10px 0 0 0;
+    width: 97%;
+    @media( min-width: 801px){ width: 100%; } 
+    section{
+        padding: 0 3%;
+        width: 60%;
+    }
+    .common-table{ width: 36%; }
+}
+section h3{ width: 70%; }
+
+
+
+//Mobile Pay
+.mobile-wrap{
+    margin: 0 auto 0.3%;
+    width: 100%;
+    section{ padding: 0 0 0 0; }
+    .mobile-table{ width: 44%; }
+}
+
+
+// Serial Number
+.serial-wrap{
+    height: 100%;
+    margin: 0 auto 0;
+    width: 100%;
+    section{
+        margin: 0 2% 0 0;
+        padding: 3% 3%;
+        width: calc(98% / 2);
+        &:last-child{ margin: 0 ; }
+    }
+}
+
+section button{ width:45%; }

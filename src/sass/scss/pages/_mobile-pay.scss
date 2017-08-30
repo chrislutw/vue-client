@@ -1,0 +1,134 @@
+.mobile-wrap{
+    margin: 0.5% auto 0.3%;
+    width: 96%;
+    @include clearfix;
+    section{
+        float: left;
+        padding: 0 0 0 1%;
+        width: 55%;
+    }
+    .mobile-table{
+        float: right;
+        position: relative;
+        width: 44%;
+    }
+}
+
+.mobile-buttons {
+    @include clearfix;
+    a{
+        background: url("../images/bg-mobile-menu.png") left top no-repeat;
+        background-size: 100% auto;
+        display: block;
+        float: left;
+        height: 0;
+        margin: 0 2% 2% 0;
+        padding-bottom: 21.5%;
+        position: relative;
+        width: 48%;
+        &.active{ 
+            background: url("../images/bg-mobile-menu-o.png") left top no-repeat; 
+            background-size: 100% auto;
+        }
+        img{
+            left: 50%;
+            height: 95%;
+            // max-width: 99%;
+            position: absolute;
+            top: 50%;
+            transform: translateX(-50%) translateY(-50%), ;
+            width: auto; 
+        }
+    }
+}
+
+
+.mobile-table .step2{
+    border: solid 1px #332f11;
+    background: rgba(#000, 1);
+    height: 100%;
+    position: absolute;   
+    text-align: center;
+    width: 100%;
+    h3{
+        background: linear-gradient(90deg, transparent, #d2b040 50%, transparent 100%);
+        color: #390d0b;
+        margin: 0 auto;
+        padding: 1% 0;
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+        text-align: center;
+    }
+}
+
+
+
+.mobile-table .mobile-tr{
+    border: solid 1px #a89839;
+    cursor: pointer;
+    height:28px;
+    line-height: 27px;
+    margin: 0 auto -1px;
+    padding: 0 5px;
+    width: 100%;
+    @include clearfix; 
+    @media (min-width: 667px){ 
+        height:34px;
+        line-height: 33px;   
+    }
+    @media (min-width: 736px){ 
+        height:36px;
+        line-height: 35px;   
+    }
+    div{
+        color: #fff;
+        font-size: 2.5vw;
+        float:left;
+        text-align:center;
+        width: calc(100%/3);
+         @media (min-width: 667px){ font-size: 16px; }
+         input[type="radio"]{ display: none; }
+    }
+    &:nth-child(odd) { background: #181421; }
+    &:nth-child(even){ background: #4a3452; }
+    &:first-child { background: #000; } 
+    
+    div.mobile-th{        
+        color: #c68440;
+       line-height: 28px;
+        @media (min-width: 667px){ line-height: 34px;  }
+        @media (min-width: 736px){ line-height: 36px;  }
+    }
+}
+
+.mobile-table .mobile-tr{
+    > div{ width: 35%;}
+    > div:first-child{ width: 10%; }
+    > div:last-child{ width: 20%;}
+    > div.mobile-th:first-child{ width: 45%; }
+    > div.mobile-th:last-child{ width: 20%; }
+}
+
+.mobile-table .mobile-tr div.check-buy{
+    background: #25112d;
+    border: solid 4px #25112d;
+    border-radius: 50%;
+    box-shadow: 0 0 2px 2px #d3c148, 0 0 2px 2px #d3c148;
+    height: 16px;
+    margin: 20% 0 0 0;
+    width: 16px;
+    @media (min-width: 568px){ margin: 20% 0 0 10%; }
+    @media (min-width: 768px){ margin: 25% 0 0 20%; }
+    
+}
+
+.mobile-table .mobile-tr.active{
+    border: solid 1px #82ff07;
+    box-shadow: 0 0 8px #82ff07 inset, 0 0 8px #82ff07 inset;
+    div.check-buy{ background: #77c937; }
+
+}
+
+
+
